@@ -26,3 +26,14 @@ x = 5
 y = 1
 puts "#{x} + #{y} = #{x + y}"
 puts x.to_s + " + " + y.to_s + " = " + (x + y).to_s
+puts "Constantine".sum
+
+puts "foobar".sub("bar", "foo")
+puts "this is a test".gsub("i", "")
+
+x = "This is a test"
+puts x.sub(/^.../, "Hi")
+puts x.sub(/...$/, "Hi")
+
+"This is a test".scan(/.../) {|letter| puts letter}
+"This is a test".scan(/\w\w/) {|letter| puts letter}
