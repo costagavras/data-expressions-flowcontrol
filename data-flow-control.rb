@@ -37,3 +37,4 @@ puts x.sub(/...$/, "Hi")
 
 "This is a test".scan(/.../) {|letter| puts letter}
 "This is a test".scan(/\w\w/) {|letter| puts letter}
+"The car costs $1000 and the "
