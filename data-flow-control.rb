@@ -37,4 +37,10 @@ puts x.sub(/...$/, "Hi")
 
 "This is a test".scan(/.../) {|letter| puts letter}
 "This is a test".scan(/\w\w/) {|letter| puts letter}
-"The car costs $1000 and the "
+#d matches any digit and + makes match any digits that follow the first one
+"The car costs $1000 and the toy car costs $10".scan(/\d+/) do |x|
+  puts x
+end
+"This is a test".scan(/[aeiou]/) {|x| puts x}
+#matching
+puts "String contains no digits" unless "This is a test" =~ /[0-9]/
