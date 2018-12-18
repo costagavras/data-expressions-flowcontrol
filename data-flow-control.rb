@@ -81,3 +81,9 @@ end
 each_vowel {|vowel| puts vowel }
 #ranges
 ("A"..."Z").to_a.each { |letter| p letter}
+
+a = [2, 4, 6, 8, 10, 12]
+p a[1..3]
+a[1..3] = ["a","b", "c"]
+p a
+s = {:key => "value"}
