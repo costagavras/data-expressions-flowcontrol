@@ -44,3 +44,26 @@ end
 "This is a test".scan(/[aeiou]/) {|x| puts x}
 #matching
 puts "String contains no digits" unless "This is a test" =~ /[0-9]/
+
+#arrays
+x = ["Word", "Play", "Fun"]
+puts x.join(", ")
+
+#Scan without block returns array of single elements
+puts "This is a test".scan(/\w/).join(",")
+#Split on dot
+puts "Short sentence. Another. Short. Sentence".split(/\./).inspect
+#Split on space
+puts "Words with lots of spaces".split(/\s+/).inspect
+
+#array addition, subtracion
+x = []
+y = []
+z = x + y
+z = x - y
+puts "x is empty" if x.empty?
+x = [1,2,3]
+p x.include?(1)
+puts x.first(2).join("-")
+
+#Hashes
