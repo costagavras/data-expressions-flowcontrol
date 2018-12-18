@@ -67,3 +67,17 @@ p x.include?(1)
 puts x.first(2).join("-")
 
 #Hashes
+x = {a: 1, b: 2}
+x.each {|key, value| puts "#{key} equals #{value}"}
+puts x.keys
+p x.keys
+people = {fred:  {name: "Fred", age: 15}}
+puts people[:fred][:age]
+
+#code blocks
+def each_vowel(&code_block)
+  %w{a e i o u}.each {|vowel| code_block.call(vowel) }
+end
+each_vowel {|vowel| puts vowel }
+#ranges
+("A"..."Z").to_a.each { |letter| p letter}
