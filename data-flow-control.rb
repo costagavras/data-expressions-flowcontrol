@@ -87,3 +87,8 @@ p a[1..3]
 a[1..3] = ["a","b", "c"]
 p a
 s = {:key => "value"}
+
+puts 10 / 3
+puts 10.to_f / 3
+puts 10.0 / 3
+puts 10 / Float(3)
