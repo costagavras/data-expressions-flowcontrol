@@ -26,3 +26,14 @@ t1 = Time.now + dhms2seconds(5,10,24) #5days, 10 hours, 24 minutes from now
 puts "#{t1}"
 t2 = Time.now + dhms2seconds(7)     #7 days from now
 puts "Time in 7 days: #{t2}"
+
+#Time difference
+past = Time.local(2019,1,8,15,50)
+# now = Time.local(2019,1,8,15,51)
+now = Time.now
+diff = now - past
+unit = seconds2dhms(diff)
+puts "#{unit[0]} days."
+puts "#{unit[1]} hours."
+puts "#{unit[2]} minutes."
+puts "#{unit[3]} seconds."
