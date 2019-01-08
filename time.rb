@@ -16,3 +16,13 @@ puts "#{t[0]} days."
 puts "#{t[1]} hours."
 puts "#{t[2]} minutes."
 puts "#{t[3]} seconds."
+
+def dhms2seconds(days,hrs=0,min=0,sec=0)
+  days*86400 + hrs*3600 + min*60 + sec
+end
+
+puts Time.now
+t1 = Time.now + dhms2seconds(5,10,24) #5days, 10 hours, 24 minutes from now
+puts "#{t1}"
+t2 = Time.now + dhms2seconds(7)     #7 days from now
+puts "Time in 7 days: #{t2}"
