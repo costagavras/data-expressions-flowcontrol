@@ -25,3 +25,26 @@ p d = a & b
 
 a = [1, 2, nil, 4, nil, 7]
 b = a.compact #[1,2,4,7]
+
+#delete, delete_at, delete_if, clear, pop, shift
+
+#Iteration
+x = %w(alpha, beta, gamma, delta)
+x.each.with_index do |x, i|
+    puts "Element #{i} is #{x}"
+end
+
+#join (", ") to make a string from an array
+
+#Counting frequency of values in an array
+
+class Array
+
+  def counts
+    each_with_object(Hash.new(0)) {|x,h| h[x] +=1}
+  end
+end
+
+meal = %w[pancakes banana pancakes pineapple meatballs banana pancakes]
+items = meal.counts
+p items
