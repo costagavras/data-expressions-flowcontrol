@@ -1,31 +1,18 @@
 #Unbalanced punctuation
-# class Stack
-#
-#   def initialize
-#     @store = []
-#   end
-#
-#   def push(x)
-#     @store.push x
-#   end
-#
-#   def pop
-#     @store.pop
-#   end
-#
-#   def peek
-#     @store.last
-#   end
+class Stack
+
+  def initialize
+    @stack = []
+  end
 
   def match_punctuation(str)
-    stack = []
     lsym = "{[(<"
     rsym = "}])>"
     str.each_char do |sym|
       if lsym.include? sym
-        stack << sym
+        @stack << sym
       elsif rsym.include? sym
-        top = stack.last
+        top = @stack.last
         if top == nil
           return false
         end
@@ -35,16 +22,17 @@
         if lsym.index(top) != rsym.index(sym)
           return false
         else
-          stack.pop
+          @stack.pop
         end
         #Ignore non-grouped characters
       end
     end
-    return stack.empty?
+    return @stack.empty?
   end
 
-# end
+end
 
 
-str1 = "[((a-b))]"
-puts match_punctuation(str1)
+str1 = "[((a-b))"
+new_stack = Stack.new
+puts new_stack.match_punctuation(str1)
