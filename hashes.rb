@@ -7,3 +7,11 @@ puts h2 == h3 #true
 
 array_to_hash = [["a", 1]].to_h
 puts array_to_hash
+
+names = {"jim" => "hacker", "humphrey" => "appleby", "bernard" => "wooley"}
+puts names.select {|k, v| v == "hacker"}
+p names.find_all {|k, v| k.count("m") > 0}
+
+#sorting a hash
+list = names.sort
+p list
