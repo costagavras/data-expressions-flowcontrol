@@ -15,3 +15,16 @@ p names.find_all {|k, v| k.count("m") > 0}
 #sorting a hash
 list = names.sort
 p list
+list_hash = list.to_h
+p list_hash
+
+#inject method
+nums = [2, 3, 4, 34, 2]
+sum = nums.inject(0) {|x,n| x + n}
+puts sum
+
+sum = 0
+nums.each {|n| sum += n}
+puts sum
+
+nums.each {|x| puts x}
